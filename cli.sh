@@ -9,7 +9,7 @@ case "$1" in
     workdir=${2:-$PWD}
     cd $workdir
 
-    sqlite3 $db
+    sqlite3 -table $db
   ;;
 
   *)
