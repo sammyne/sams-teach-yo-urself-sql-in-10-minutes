@@ -1,9 +1,14 @@
 #!/bin/bash
 
-db=data/TYSQL.sqlite
+cd `dirname ${BASH_SOURCE[0]}`
+
+db=$PWD/data/TYSQL.sqlite
 
 case "$1" in
   up)
+    workdir=${2:-$PWD}
+    cd $workdir
+
     sqlite3 $db
   ;;
 
