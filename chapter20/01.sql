@@ -1,0 +1,5 @@
+-- 使用 COMMIT
+BEGIN TRANSACTION;
+DELETE FROM OrderItems WHERE order_num = 12345;
+DELETE FROM Orders WHERE order_num = 12345;
+COMMIT;
